@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "b365d3f5-5753-4db4-abe9-a2f4ff077404",
+		"name": "fare-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Update driver by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Tran Quang Anh\",\n    \"email\": \"quanganhsaker@gmail.com\",\n    \"vehicleType\": \"bike-update\",\n    \"baseFarePrice\": 200.0,\n    \"baseFareDistance\": 150.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/driver/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"driver",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all driver",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/driver",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"driver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Driver",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ho sy quyet\",\n    \"email\": \"b@gmail.com\",\n    \"vehicleType\": \"bike\",\n    \"baseFarePrice\": 300,\n    \"baseFareDistance\": 150\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/driver",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"driver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get driver by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/driver/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"driver",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete driver by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/driver/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"driver",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate fare",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csvFile",
+							"type": "file",
+							"src": "/Users/buihoa/Desktop/test.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/fare/calculate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fare",
+						"calculate"
+					],
+					"query": [
+						{
+							"key": "csvFile",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get history fare",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fare/history",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fare",
+						"history"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
