@@ -18,6 +18,11 @@ public class DriverServiceImpl implements DriverService {
     @Autowired
     private DriverRepository driverRepository;
 
+    /**
+     * Get all driver in databse
+     *
+     * @return List<Driver>
+     */
     public List<Driver> getAllDrivers() {
         return driverRepository.findAll();
     }

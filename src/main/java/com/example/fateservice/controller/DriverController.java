@@ -25,7 +25,7 @@ public class DriverController {
     @GetMapping("")
     public ResponseEntity<List<Driver>> getAll() {
         List<Driver> drivers = driverService.getAllDrivers();
-        return ResponseEntity.ok().body(drivers);
+        return ResponseEntity.status(HttpStatus.OK).body(drivers);
     }
 
     /**
