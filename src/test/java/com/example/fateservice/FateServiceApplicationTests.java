@@ -8,6 +8,7 @@ class FateServiceApplicationTests {
 
     @Test
     void contextLoads() {
+    
     }
 
 }
